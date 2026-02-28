@@ -1,24 +1,21 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-  <meta charset="UTF-8">
-  <title>Mastro della Pasta</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
 <h1>🍝 Mastro della Pasta</h1>
 
 <div class="section">
   <h2>1. Proporcje</h2>
-  <label>Mąka: <input type="range" id="flour" min="0" max="100" value="50"></label>
-  <label>Jajka: <input type="range" id="eggs" min="0" max="100" value="50"></label>
+  <label>Mąka:
+    <input type="range" id="flour" min="0" max="100" value="50">
+  </label>
+  <label>Jajka:
+    <input type="range" id="eggs" min="0" max="100" value="50">
+  </label>
 </div>
 
 <div class="section">
   <h2>2. Wyrabianie</h2>
   <button id="kneadBtn">Wyrabiaj!</button>
-  <p>Postęp: <span id="kneadProgress">0</span>%</p>
+  <div class="bar">
+    <div id="kneadBar" class="fill"></div>
+  </div>
 </div>
 
 <div class="section">
@@ -28,8 +25,14 @@
 
 <div class="section">
   <h2>4. Gotowanie</h2>
-  <button id="cookBtn">Gotuj!</button>
-  <p>Czas: <span id="cookTime">0</span>s</p>
+  <button id="cookBtn">Start / Stop</button>
+  <div class="bar">
+    <div id="cookBar" class="fill"></div>
+  </div>
+</div>
+
+<div class="section">
+  <div id="pastaVisual"></div>
 </div>
 
 <div class="section">
@@ -37,7 +40,5 @@
 </div>
 
 <h2 id="result"></h2>
-
-<script src="game.js"></script>
-</body>
-</html>
+<h3 id="comment"></h3>
+<h3>🏆 Rekord: <span id="highscore">0</span></h3>
